@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Crafted Shoot Blueprint</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check,close" />
+
+    <!-- <span class="material-symbols-outlined">
+            check
+        </span> -->
+</head>
+
+<body>
+    <!-- ==============================HEADER================================ -->
+
+    <header>
+        <h1 id="site-header">Lens Crafted Shoot Blueprint</h1>
+
+    </header>
+    <main>
+        <!-- ==============================HOME-PAGE================================ -->
+        <div class="step-pagination">
+            <span class="page active">Client</span>
+            <span class="page">Equipment</span>
+            <span class="page">Rooms</span>
+            <span class="page">Shoot Saved</span>
+        </div>
+
+        <div class="Main-Container">
+            <section class="hero">
+                <h2 class="hero-text">
+                    <span>CAPTURE EVERY ANGLE</span>
+                    <span>MISS NOTHING</span>
+                </h2>
+            </section>
+            <section class="hero">
+                <p class="hero-content">BECAUSE EVERY DETAIL MATTERS</p>
+                <p class="user-experience">CLICK ON CREATE A SHOOT OR GO TO DASHBOARD</p>
+            </section>
+            <section class="buttonshomepage">
+                <button class="createShoot" id="create-a-shoot">CREATE A SHOOT</button>
+                <button class="dashboardButton" id="go-to-dashboard">SHOW DASHBOARD</button>
+            </section>
+        </div>
+
+        <!-- ==============================CREATE A SHOOT VIEW================================ -->
+
+        <div class="createShootView">
+            <h3 id="shootform-heading">CREATE NEW SHOOT</h3>
+
+            <p class="user-experience">FILL THE FORM BELOW AND PRESS SUBMIT SHOOT DETAILS TO CREATE A SHOOT
+                <span class="info-icon" id="clientInfoIcon">&#9432;</span>
+            </p>
+            <p class="helper-text hidden" id="clientHelpText">
+                This is the booking information for the day of the shoot. Enter client details, contact info, and
+                schedule.
+            </p>
+            <form name="client_form" method="post">
+                <div id="createShootForm">
+                    <label for="clientName">CLIENT NAME<span class="astricks"> *</span></label>
+                    <input type="text" id="clientName" name="clientName" placeholder="Client Name">
+
+
+                    <label for="contact">CONTACT<span class="astricks"> *</span></label>
+                    <input type="tel" id="contact" name="contact" placeholder="Phone Number">
+
+
+                    <label for="email">EMAIL<span class="astricks"> *</span></label>
+                    <input type="email" id="email" name="email" placeholder="abc@email.com">
+
+
+                    <label for="address">ADDRESS<span class="astricks"> *</span></label>
+                    <input type="text" id="address" name="address" placeholder="Property Address">
+
+
+                    <label for="propertyType">PROPERTY TYPE<span class="astricks"> *</span></label>
+                    <select id="propertyType" name="propertyType">
+                        <option disabled selected>Property Type</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+
+                    </select>
+
+
+                    <label for="date">DATE<span class="astricks"> *</span></label>
+                    <input type="date" id="date" name="date">
+
+                    <label for="specialNote">SPECIAL NOTE</label>
+                    <textarea id="specialNote" name="specialNote"
+                        placeholder="Additional Client Requirements"></textarea>
+                </div>
+                <div class="checkbox-button-group">
+
+                    <label>
+                        DRONE REQUIRED
+                        <input type="checkbox" class="checkbox" name="dronerequired" value="yes">
+                    </label>
+
+                    <label>
+                        FLASH REQUIRED
+                        <input type="checkbox" class="checkbox" name="flashrequired" value="yes">
+                    </label>
+
+
+                    <button type="submit" id="submitShoot" class="buttons">SUBMIT SHOOT DETAILS</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ==============================EQUIPMENT CHECKLIST FORM================================ -->
+
+        <div class="equipmentChecklistView">
+            <h3 id="equipmentChecklistHeading">EQUIPMENT CHECKLIST</h3>
+
+            <p id="equipmentChecklistText">
+                <!-- <span id="clientNameEForm">CLIENT NAME</span>
+                <span id="clientAddressEForm">ADDRESS</span> -->
+                <span>SELECT EQUIPMENT AND PRESS SUBMIT TO CONTINUE</span>
+                <span class="info-icon" id="equipmentInfoIcon">&#9432;</span>
+            </p>
+            <p class="helper-text hidden" id="equipmentHelpText">
+                Packing checklist — select all equipment you will bring while packing for the shoot.
+            </p>
+            <form name="equipment_form" method="post">
+                <div class="equipmentFormcheckbox">
+                    <label class="box">
+                        CAMERA *
+                        <input type="checkbox" class="equipmentbox" id="camera" name="camera" value="yes">
+                    </label>
+                    <label class="box">
+                        LENS *
+                        <input type="checkbox" class="equipmentbox" id="lens" name=" lens" value="yes">
+                    </label>
+                    <label class="box">
+                        TRIPOD *
+                        <input type="checkbox" class="equipmentbox" id="tripod" name="tripod" value="yes">
+                    </label>
+                    <label class="box">
+                        SD CARDS *
+                        <input type="checkbox" class="equipmentbox" id="sdcards" name="sdcards" value="yes">
+                    </label>
+                    <label class="box">
+                        EXTRA BATTERIES
+                        <input type="checkbox" class="equipmentbox" id="extrabatteries" name="extrabatteries"
+                            value="yes">
+                    </label>
+                    <label class="box">
+                        CLEANING KIT
+                        <input type="checkbox" class="equipmentbox" id="cleaningkit" name="cleaningkit" value="yes">
+                    </label>
+                    <label for="drone" class="box">
+                        DRONE *
+                        <input type="checkbox" class="equipmentbox" id="drone" name="drone" value="yes">
+                    </label>
+                    <label for="flash" class="box">
+                        FLASH *
+                        <input type="checkbox" class="equipmentbox" id="flash" name="flash" value="yes">
+                    </label>
+                    <label class="box">
+                        GIMBAL *
+                        <input type="checkbox" class="equipmentbox" id="gimbal" name="gimbal" value="yes">
+                    </label>
+                    <label class="box">
+                        AUDIO MIC
+                        <input type="checkbox" class="equipmentbox" id="audio-mic" name="audio-mic" value="yes">
+                    </label>
+                    <label class="box">
+                        LAPTOP/I-PAD *
+                        <input type="checkbox" class="equipmentbox" id="laptop" name="laptop" value="yes">
+                    </label>
+                    <label class="box">
+                        LENS FILTERS *
+                        <input type="checkbox" class="equipmentbox" id="lensfilters" name="lensfilters" value="yes">
+                    </label>
+                    <div id="customEquipmentContainer"></div>
+                    <div class="box">
+                        <label for="addgadget">ADD GADGET</label>
+                        <input type="text" id="addgadget" name="addgadget" placeholder="Gadget Name">
+                        <button type="button" id="addGadgetBtn">Add</button>
+                    </div>
+
+
+                    <button type="submit" id="submitEquipment" class="buttons">SUBMIT EQUIPMENT DETAILS</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ==================== ROOM CHECKLIST VIEW ========================  -->
+
+        <div class="roomsView">
+            <h3 id="roomsHeading">ROOM'S CHECKLIST</h3>
+
+
+            <p id="roomsChecklistText">
+                <!-- <span id="clientNameForm">CLIENT NAME</span>
+                <span id="clientAddressForm">ADDRESS</span> -->
+                <span>SELECT ROOMS AS YOU SHOOT THEM AND PRESS SUBMIT TO CONTINUE</span>
+                <span class="info-icon" id="roomsInfoIcon">&#9432;</span>
+            </p>
+            <p class="helper-text hidden" id="roomsHelpText">
+                On-site checklist — select rooms/spaces as you capture them during the shoot.
+            </p>
+            <!-- ==================== PROGRESS TRACKER HERE ========================  -->
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <!-- ========================== ROOMS FORM ================================ -->
+            <p id="roomStats"></p>
+            <p id="completionMessageRooms"></p>
+
+            <form name="rooms_form" method="post">
+                <div class="roomsChecklistForm">
+                    <label for="frontelevation" class="roombox">
+                        FRONT ELEVATION *
+                        <input type="checkbox" class="equipmentbox" id="frontelevation" name="frontelevation"
+                            value="yes">
+                    </label>
+                    <label for="mainentrance" class="roombox">
+                        MAIN-ENTRANCE *
+                        <input type="checkbox" class="equipmentbox" id="mainentrance" name="mainentrance" value="yes">
+                    </label>
+                    <label for="driveway" class="roombox">
+                        DRIVEWAY *
+                        <input type="checkbox" class="equipmentbox" id="driveway" name="driveway" value="yes">
+                    </label>
+                    <label for="garage" class="roombox">
+                        GARAGE *
+                        <input type="checkbox" class="equipmentbox" id="garage" name="garage" value="yes">
+                    </label>
+                    <label for="patio" class="roombox">
+                        PATIO *
+                        <input type="checkbox" class="equipmentbox" id="patio" name="patio" value="yes">
+                    </label>
+                    <label for="backyard" class="roombox">
+                        BACK-YARD *
+                        <input type="checkbox" class="equipmentbox" id="backyard" name=" backyard" value="yes">
+                    </label>
+                    <label for="livingroom" class="roombox">
+                        LIVING ROOM *
+                        <input type="checkbox" class="equipmentbox" id="livingroom" name="livingroom" value="yes">
+                    </label>
+                    <label for="kitchen" class="roombox">
+                        KITCHEN *
+                        <input type="checkbox" class="equipmentbox" id="kitchen" name="kitchen" value="yes">
+                    </label>
+                    <label for="bedrooms" class="roombox">
+                        BEDROOMS *
+                        <input type="checkbox" class="equipmentbox" id="bedrooms" name="bedrooms" value="yes">
+                    </label>
+                    <label for="bathrooms" class="roombox">
+                        BATHROOMS *
+                        <input type="checkbox" class="equipmentbox" id="bathrooms" name="bathrooms" value="yes">
+                    </label>
+                    <label for="laundry" class="roombox">
+                        LAUNDRY *
+                        <input type="checkbox" class="equipmentbox" id="laundry" name="laundry" value="yes">
+                    </label>
+
+                    <label for="balcony" class="roombox">
+                        BALCONY *
+                        <input type="checkbox" class="equipmentbox" id="balcony" name="balcony" value="yes">
+                    </label>
+
+                    <label for="rooftop" class="roombox">
+                        ROOF TERRACE *
+                        <input type="checkbox" class="equipmentbox" id="rooftop" name="rooftop" value="yes">
+                    </label>
+
+                    <label for="lobby" class="roombox">
+                        MAIN LOBBY *
+                        <input type="checkbox" class="equipmentbox" id="lobby" name="lobby" value="yes">
+                    </label>
+
+                    <label for="amenities" class="roombox">
+                        AMENITIES *
+                        <input type="checkbox" class="equipmentbox" id="amenities" name="amenities" value="yes">
+                    </label>
+
+                    <label for="parking" class="roombox">
+                        PARKING LOT/PARKING GARAGE *
+                        <input type="checkbox" class="equipmentbox" id="parking" name="parking" value="yes">
+                    </label>
+                    <div id="customRoomContainer"></div>
+                    <!-- <label for="addspace" class="roombox">
+                        ADD SPACE
+                        <input type="text" id="addspace" name="addspace" placeholder="Room Name">
+                        <button type="button" id="addSpaceBtn">Add</button>
+
+                    </label> -->
+                    <div class="roombox">
+                        ADD SPACE
+                        <input type="text" id="addspace" name="addspace" placeholder="Room Name">
+                        <button type="button" id="addSpaceBtn">Add</button>
+                    </div>
+
+                    <button type="submit" id="submitRooms" class="buttons">SUBMIT ROOMS DETAILS</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ============================== THANKYOU PAGE AFTER SUBMISSION OF FORMS ================================ -->
+
+        <div class="Thankyou-Container">
+            <p class="hero-thankyou">
+                <span id="firstSpanThanks">YOU'VE COMPLETED THE SHOOT SUCCESSFULLY</span>
+                <span>EVERY DETAIL IS CAPTURED AND READY FOR REVIEW</span>
+            </p>
+            <button class="dashboardButton" id="hero-dashboard">SHOW DASHBOARD</button>
+        </div>
+
+        <!-- ============================== EMPTY DASHBOARD PAGE ================================ -->
+
+        <div class="empty-dashboard">
+            <h3 id="dashboardHeading">DASHBOARD</h3>
+            <p id="emptyDashboardText">
+                <span id="firstSpanEmpty">CURRENT DASHBOARD IS EMPTY</span>
+                <span>CLICK ON CREATE A SHOOT TO ADD SHOOT TO DASHBOARD</span>
+            </p>
+            <button class="createShoot" id="create-a-shoot-empty">CREATE A SHOOT</button>
+        </div>
+
+        <!-- ============================== DASHBOARD PAGE ================================ -->
+
+        <div class="dashboardPage">
+            <h3 id="dashboardHeadingCard">DASHBOARD</h3>
+            <div id="dashboardCards">
+                <div id="detailCards"></div>
+            </div>
+        </div>
+
+        <!-- ============================== SHOOT DETAIL PAGE ================================ -->
+        <div class="shootDetailView">
+            <!-- <h3 class="detailsHeading">SHOOT DETAILS</h3> -->
+            <!-- <h3 class="detailsHeading">EQUIPMENT DETAILS</h3> -->
+            <h3 class="detailsHeading">ROOMS DETAILS</h3>
+        </div>
+
+        <div class="navButtons">
+            <button id="backButton" class="homePage">BACK</button>
+            <button id="homeButton" class="homePage">HOME</button>
+        </div>
+
+    </main>
+    <!-- ==============================FOOTER================================ -->
+
+    <footer id="site-footer">
+        <p>&copy; Copyright Lovepreet Sandhu, 2026</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

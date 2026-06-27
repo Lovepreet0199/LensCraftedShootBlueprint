@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'Blacksword';
+  src: url('fonts/Blacksword.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* Improves loading performance */
+}
+
+@font-face {
+  font-family: 'Perandory';
+  src: url('fonts/PerandorySemiCondensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* Improves loading performance */
+}
+
+:root {
+  --mochaBerry: #7B4955;
+  --softVanilla: #F4EDDB;
+}
+
+/* =======================BODY DESIGN======================= */
+
+body {
+  font-family: 'Perandory', sans-serif;
+  background-color: rgba(244, 237, 219, 0.86);
+  color: var(--mochaBerry);
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* =======================HEADER============================ */
+
+#site-header {
+  font-family: 'Blacksword', sans-serif;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 25px 283px 25px 326px;
+  background-color: rgba(244, 237, 219, 0.92);
+}
+
+/* =======================MAIN CONTAINER============================ */
+
+.hero-text {
+  font-size: 96px;
+  font-weight: normal;
+}
+
+.hero-text span {
+  display: block;
+  text-align: center;
+}
+
+.hero-text span:nth-child(1) {
+  padding-bottom: 39px;
+  padding-top: 80px;
+}
+
+.hero-content {
+  font-size: 40px;
+  text-align: center;
+}
+
+.user-experience {
+  font-size: 28px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Main-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =======================BUTTONS============================ */
+.navButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#homeButton,
+#backButton {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-top: 7px;
+  margin-right: 10px;
+  padding: 10px;
+  /* margin-bottom: 20px;
+  
+  margin-top: 20px;
+   */
+  /* display: none; */
+}
+
+.buttonshomepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePage {
+
+  font-family: 'Perandory', sans-serif;
+  font-size: 30px;
+  background-color: var(--mochaBerry);
+  color: var(--softVanilla);
+  border: none;
+  margin-left: 25px;
+}
+
+.createShoot,
+.dashboardButton,
+#hero-dashboard {
+  font-family: 'Perandory', sans-serif;
+  font-size: 30px;
+  background-color: var(--mochaBerry);
+  color: var(--softVanilla);
+  padding: 13px 26px 14px 27px;
+  border: none;
+}
+
+#submitShoot,
+#submitEquipment,
+#submitRooms {
+  font-family: 'Perandory', sans-serif;
+  font-size: 30px;
+  background-color: var(--mochaBerry);
+  color: var(--softVanilla);
+  border: none;
+}
+
+#create-a-shoot {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+#go-to-dashboard {
+  margin-bottom: 110px;
+}
+
+.createShoot:hover,
+.dashboardButton:hover,
+#submitShoot:hover,
+#submitEquipment:hover,
+.homePage:hover,
+#submitRooms:hover,
+#hero-dashboard:hover {
+  background-color: var(--softVanilla);
+  color: var(--mochaBerry);
+}
+
+/* =======================DISPLAYS========================== */
+/* .Main-Container {
+  display: none;
+} */
+
+/* =======================CREATE A SHOOT VIEW=============== */
+
+#shootform-heading {
+  font-size: 39px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.createShootView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#createShootForm {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 20px;
+  row-gap: 25px;
+  margin-top: 25px;
+}
+
+.checkbox-button-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 62px;
+}
+
+#specialNote {
+  padding-bottom: 70px;
+  padding-right: 126px;
+}
+
+#submitShoot {
+  margin-top: 25px;
+}
+
+.checkbox {
+  margin-left: 140px;
+}
+
+/* =======================DISPLAYS========================== */
+
+.createShootView {
+  display: none;
+}
+
+/* ===================EQUIPMENT CHECKLIST FORM VIEW============== */
+.equipmentChecklistView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#equipmentChecklistText span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.equipmentFormcheckbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+#submitEquipment {
+  margin: 0;
+  font-size: 28px;
+}
+
+#equipmentChecklistHeading {
+  font-size: 40px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box p {
+  padding: 0;
+  margin: 0;
+}
+
+/* =======================DISPLAYS========================== */
+
+.equipmentChecklistView {
+  display: none;
+}
+
+/* ================ ROOM CHECKLIST VIEW ===================== */
+
+.roomsView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#roomsChecklistText span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.roomsChecklistForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+#submitRooms {
+  margin: 0;
+  font-size: 28px;
+}
+
+.roombox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#roomsHeading {
+  font-size: 40px;
+}
+
+.roombox p {
+  padding: 0;
+  margin: 0;
+}
+
+/* ======================= PROGRESS BAR ========================= */
+
+#progress-bar {
+  width: 400px;
+  max-width: 80%;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 30px;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: rgb(255, 0, 0);
+  border-radius: 5px;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+/* =======================DISPLAYS========================== */
+
+.roomsView {
+  display: none;
+}
+
+/* =======================THANKYOU PAGE VIEW============================ */
+
+.Thankyou-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-thankyou span {
+  display: block;
+  text-align: center;
+}
+
+.hero-thankyou {
+  font-size: 48px;
+  margin-top: 206px;
+  margin-bottom: 164px;
+}
+
+#firstSpanThanks {
+  margin-bottom: 19px;
+}
+
+#hero-dashboard {
+  margin-bottom: 280px;
+}
+
+/* =======================DISPLAYS========================== */
+
+.Thankyou-Container {
+  display: none;
+}
+
+/* =======================EMPTY DASHBOARD========================== */
+
+.empty-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dashboardHeading {
+  font-size: 64px;
+  margin-top: 165px;
+  margin-bottom: 148px;
+}
+
+#emptyDashboardText {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+#emptyDashboardText span {
+  display: block;
+  text-align: center;
+}
+
+#firstSpanEmpty {
+  margin-bottom: 19px;
+}
+
+#create-a-shoot-empty {
+  margin-top: 137px;
+  margin-bottom: 162px;
+}
+
+/* =======================DISPLAYS========================== */
+
+.empty-dashboard {
+  display: none;
+}
+
+/* =======================DASHBOARD========================== */
+
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dashboardHeadingCard {
+  font-size: 64px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#dashboardCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+}
+
+#detailCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 30px;
+  text-align: center;
+}
+
+.shoot-card {
+  padding: 5px;
+  border: #7B4955 solid 2px;
+  box-sizing: border-box;
+}
+
+.viewButton,
+.deleteButton {
+  font-family: 'Perandory', sans-serif;
+  font-size: 28px;
+  background-color: var(--mochaBerry);
+  color: var(--softVanilla);
+  padding: 10px 20px 10px 20px;
+  border: none;
+}
+
+#addGadgetBtn,
+#addSpaceBtn {
+  font-family: 'Perandory', sans-serif;
+  font-size: 25px;
+  background-color: var(--mochaBerry);
+  color: var(--softVanilla);
+  border: none;
+}
+
+#addGadgetBtn:hover,
+#addSpaceBtn:hover {
+  color: var(--mochaBerry);
+  background-color: var(--softVanilla);
+}
+
+.viewButton:hover,
+.deleteButton:hover {
+  font-family: 'Perandory', sans-serif;
+  font-size: 28px;
+  color: var(--mochaBerry);
+  background-color: var(--softVanilla);
+  padding: 10px 20px 10px 20px;
+  border: none;
+}
+
+/* =======================DISPLAYS========================== */
+
+.dashboardPage {
+  display: none;
+}
+
+/* ================== SHOOT DETAIL PAGE ==================== */
+.shootDetailView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailsHeading {
+  font-size: 58px;
+  margin: 45px;
+}
+
+/* =======================DISPLAYS========================== */
+
+.shootDetailView {
+  display: none;
+}
+
+/* =======================FOOTER============================ */
+#site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 52px 20px 53px 20px;
+  font-family: Poppins, sans-serif;
+  background-color: rgba(244, 237, 219, 0.92);
+}
+
+/* =======================STYLE CLASSES TO ADD============================ */
+.error {
+  border: 2px solid red;
+  background-color: rgb(255, 0, 0, 0.3);
+}
+
+input[type="checkbox"].error {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+
+.greenTick {
+  color: green;
+}
+
+.redCross {
+  color: red;
+}
+
+/*SHOOT DETail table*/
+/* .detailTable{
+  border: black solid 2px;
+} */
+.detailTable td,
+th {
+  padding: 20px 150px;
+  text-align: center;
+  border: black solid 2px;
+}
+
+.detailTable th {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+#customRoomContainer {
+  display: none;
+}
+
+.info-icon {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 30px;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
+.info-icon:hover {
+  color: #000;
+  transform: scale(1.2) !important;
+
+}
+
+.helper-text {
+  font-size: 30px;
+  color: var(--mochaBerry);
+  margin: 5px 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ==================================== */
+.step-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.page {
+  padding: 10px 50px;
+ margin: 20px 50px;
+  border-radius: 5px;
+  background: var(--softVanilla);
+  color: var(--mochaBerry);
+  font-size: 20px;
+  transition: 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.page.active {
+  background: var(--mochaBerry);
+  color: var(--softVanilla);
+  font-weight: bold;
+}
+
+.page.completed {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.step-pagination {
+  position: relative;
+}
+
+.step-pagination::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(123, 73, 85, 0.3);
+  transform: translateY(-50%);
+  z-index: 0;
+}
